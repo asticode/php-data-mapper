@@ -153,6 +153,17 @@ abstract class AbstractMapper
     {
         $this->formatToDb($aWhere);
         list($sQuery, $aParameters) = $this->buildSelectQuery($this->get('entity'), $aWhere, $sOrderBy, $iLimit, $iOffset);
+        return $this->fetchAllQuery($sQuery, $aParameters);
+    }
+
+    public function fetchOne(array $aWhere, $sOrderBy = '')
+    {
+        $aAllRecords = $this->fetchAll($aWhere, $sOrderBy, 1);
+        return isset($aAllRecords[0]) ? $aAllRecords[0] : [];
+    }
+
+    public function fetchAllQuery($sQuery, array $aParameters = [])
+    {
         try {
             $aAllRecords = $this->oPdo->fetchAll($sQuery, $aParameters) ?: [];
         } catch (\PDOException $oException) {
@@ -170,10 +181,10 @@ abstract class AbstractMapper
 
         return $aAllRecords;
     }
-
-    public function fetchOne(array $aWhere, $sOrderBy = '')
+    
+    public function fetchOneQuery($sQuery, array $aParameters = [])
     {
-        $aAllRecords = $this->fetchAll($aWhere, $sOrderBy, 1);
+        $aAllRecords = $this->fetchAllQuery($sQuery, $aParameters);
         return isset($aAllRecords[0]) ? $aAllRecords[0] : [];
     }
 

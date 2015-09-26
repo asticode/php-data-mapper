@@ -27,7 +27,7 @@ class RepositoryFactory
         if (empty($this->aRepositories[$sRepositoryName])) {
             // Get class name
             $sClassName = sprintf(
-                '\\%1$s\\%2$s',
+                '\\%1$s\\Repository\\%2$s',
                 $sNamespace === '' ? $this->sNamespace : $sNamespace,
                 ExtendedString::toCamelCase($sRepositoryName)
             );

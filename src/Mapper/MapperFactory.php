@@ -27,7 +27,7 @@ class MapperFactory
         if (empty($this->aMappers[$sMapperName])) {
             // Get class name
             $sClassName = sprintf(
-                '\\%1$s\\%2$s',
+                '\\%1$s\\Mapper\\%2$s',
                 $sNamespace === '' ? $this->sNamespace : $sNamespace,
                 ExtendedString::toCamelCase($sMapperName, '_', true)
             );

@@ -3,7 +3,6 @@ namespace Asticode\DataMapper\Repository;
 
 use Asticode\DataMapper\Mapper\MapperFactory;
 use Asticode\Toolbox\ExtendedString;
-use Psr\Log\LoggerInterface;
 
 class RepositoryFactory
 {
@@ -23,7 +22,7 @@ class RepositoryFactory
         $this->sNamespace = $sNamespace;
     }
 
-    public function getRepository($sRepositoryName, $sNamespace = '')
+    public function getRepository($sRepositoryName, $sNamespace)
     {
         if (empty($this->aRepositories[$sRepositoryName])) {
             // Get class name

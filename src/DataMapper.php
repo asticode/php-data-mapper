@@ -1,5 +1,5 @@
 <?php
-namespace Asticode\DataMapper\Repository;
+namespace Asticode\DataMapper;
 
 use Asticode\DataMapper\Mapper\MapperFactory;
 use Aura\Sql\ConnectionLocatorInterface;

@@ -175,8 +175,8 @@ abstract class AbstractMapper
         }
 
         // Format:
-        foreach ($aAllRecords as $idx => $aRecord) {
-            $this->formatFromDb($aRecord);
+        foreach ($aAllRecords as $iIndex => $aRecord) {
+            $this->formatFromDb($aAllRecords[$iIndex]);
         }
 
         return $aAllRecords;

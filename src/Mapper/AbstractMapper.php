@@ -62,6 +62,20 @@ abstract class AbstractMapper
         }
     }
 
+    public function formatFromDb(array &$aParameters)
+    {
+        foreach ($this->aJsonColumns as $sColumn) {
+            if (isset($aParameters[$sColumn])) {
+                $aParameters[$sColumn] = json_decode($aParameters[$sColumn], true);
+            }
+        }
+        foreach ($this->aBinaryColumns as $sColumn) {
+            if (isset($aRecord[$sColumn])) {
+                $aParameters[$sColumn] = bin2hex($aParameters[$sColumn]);
+            }
+        }
+    }
+
     /**
      * Returns a where expression (without WHERE keyword) with placeholders instead of values.
      *
@@ -151,16 +165,7 @@ abstract class AbstractMapper
 
         // Format:
         foreach ($aAllRecords as $idx => $aRecord) {
-            foreach ($this->aJsonColumns as $sColumn) {
-                if (isset($aRecord[$sColumn])) {
-                    $aAllRecords[$idx][$sColumn] = json_decode($aRecord[$sColumn], true);
-                }
-            }
-            foreach ($this->aBinaryColumns as $sColumn) {
-                if (isset($aRecord[$sColumn])) {
-                    $aAllRecords[$idx][$sColumn] = bin2hex($aRecord[$sColumn]);
-                }
-            }
+            $this->formatFromDb($aRecord);
         }
 
         return $aAllRecords;

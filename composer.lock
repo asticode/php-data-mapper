@@ -1,0 +1,121 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "99029829be20a9de6a5562e13eaa70dc",
+    "packages": [
+        {
+            "name": "asticode/php-toolbox",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asticode/php-toolbox.git",
+                "reference": "322c2ae69046354926671ced606a428b9f66148b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asticode/php-toolbox/zipball/322c2ae69046354926671ced606a428b9f66148b",
+                "reference": "322c2ae69046354926671ced606a428b9f66148b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Asticode\\Toolbox\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Quentin RENARD",
+                    "email": "contact@asticode.com",
+                    "homepage": "http://asticode.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Static methods to ease PHP developments",
+            "homepage": "https://github.com/asticode/php-toolbox",
+            "keywords": [
+                "Toolbox",
+                "array",
+                "php",
+                "shell",
+                "string"
+            ],
+            "time": "2015-09-26 08:31:50"
+        },
+        {
+            "name": "aura/sql",
+            "version": "2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Sql.git",
+                "reference": "69ade8ae9920751da9a020eb78f5ed6ee4ac6a88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Sql/zipball/69ade8ae9920751da9a020eb78f5ed6ee4ac6a88",
+                "reference": "69ade8ae9920751da9a020eb78f5ed6ee4ac6a88",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Sql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Sql Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Sql/contributors"
+                }
+            ],
+            "description": "A PDO extension that provides lazy connections, array quoting, identifier quoting, query profiling, value binding, and convenience methods for common fetch styles. Because it extends PDO, existing code that uses PDO can use this without any changes to the existing code.",
+            "homepage": "https://github.com/auraphp/Aura.Sql",
+            "keywords": [
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "time": "2015-03-27 20:02:04"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "asticode/php-toolbox": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}

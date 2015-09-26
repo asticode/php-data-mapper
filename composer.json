@@ -18,7 +18,9 @@
     }
   ],
   "require": {
-    "php": ">=5.3.0"
+    "php": ">=5.3.0",
+    "aura/sql": "~2.4.0",
+    "asticode/php-toolbox": "dev-master"
   },
   "autoload": {
     "psr-4": {

@@ -1,7 +1,7 @@
 {
   "name": "asticode/php-data-mapper",
   "type": "library",
-  "description": "",
+  "description": "Mapper and Repository factories that implements the Data Mapper structure",
   "keywords": [
     "php",
     "data",

@@ -3,6 +3,7 @@ namespace Asticode\DataMapper\Repository;
 
 use Asticode\DataMapper\Mapper\MapperFactory;
 use Asticode\Toolbox\ExtendedString;
+use RuntimeException;
 
 class RepositoryFactory
 {
@@ -31,6 +32,14 @@ class RepositoryFactory
                 $sNamespace === '' ? $this->sNamespace : $sNamespace,
                 ExtendedString::toCamelCase($sRepositoryName, '_', true)
             );
+
+            // Check class exists
+            if (!class_exists($sClassName)) {
+                throw new RuntimeException(sprintf(
+                    'Invalid class name %s',
+                    $sClassName
+                ));
+            }
 
             // Create repository
             $this->aRepositories[$sRepositoryName] = new $sClassName(

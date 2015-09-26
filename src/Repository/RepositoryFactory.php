@@ -29,7 +29,7 @@ class RepositoryFactory
             $sClassName = sprintf(
                 '\\%1$s\\Repository\\%2$s',
                 $sNamespace === '' ? $this->sNamespace : $sNamespace,
-                ExtendedString::toCamelCase($sRepositoryName)
+                ExtendedString::toCamelCase($sRepositoryName, '_', true)
             );
 
             // Create repository

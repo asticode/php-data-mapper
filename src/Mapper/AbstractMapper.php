@@ -181,7 +181,7 @@ abstract class AbstractMapper
 
         return $aAllRecords;
     }
-    
+
     public function fetchOneQuery($sQuery, array $aParameters = [])
     {
         $aAllRecords = $this->fetchAllQuery($sQuery, $aParameters);

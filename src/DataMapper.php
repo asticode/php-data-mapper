@@ -2,6 +2,7 @@
 namespace Asticode\DataMapper;
 
 use Asticode\DataMapper\Mapper\MapperFactory;
+use Asticode\DataMapper\Repository\RepositoryFactory;
 use Aura\Sql\ConnectionLocatorInterface;
 
 class DataMapper

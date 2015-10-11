@@ -248,4 +248,9 @@ abstract class AbstractMapper
     {
         return $this->oPdo;
     }
+
+    public function disconnectPdo()
+    {
+        $this->oPdo->disconnect();
+    }
 }

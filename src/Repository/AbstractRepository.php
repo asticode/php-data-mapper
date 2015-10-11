@@ -14,4 +14,9 @@ abstract class AbstractRepository
         // Initialize
         $this->oMapper = $oMapper;
     }
+
+    public function disconnectPdo()
+    {
+        $this->oMapper->disconnectPdo();
+    }
 }

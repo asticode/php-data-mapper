@@ -8,6 +8,7 @@
 namespace Asticode\DataMapper\Mapper;
 
 use Aura\Sql\ExtendedPdoInterface;
+use Aura\Sql\ExtendedPdo;
 
 /**
  * Mapper's common functions.
@@ -251,6 +252,8 @@ abstract class AbstractMapper
 
     public function disconnectPdo()
     {
-        $this->oPdo->disconnect();
+        /** @var $oPdo ExtendedPdo */
+        $oPdo = $this->oPdo;
+        $oPdo->disconnect();
     }
 }

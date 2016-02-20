@@ -4,24 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "99029829be20a9de6a5562e13eaa70dc",
+    "hash": "dc4fb43176f5f5f9515d8bcafe4b4f04",
+    "content-hash": "ae77f421d72752ca1e98efb62a732e5e",
     "packages": [
         {
             "name": "asticode/php-toolbox",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asticode/php-toolbox.git",
-                "reference": "322c2ae69046354926671ced606a428b9f66148b"
+                "reference": "55f30ee22329c2df4fd452e07d0347f1913af62c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asticode/php-toolbox/zipball/322c2ae69046354926671ced606a428b9f66148b",
-                "reference": "322c2ae69046354926671ced606a428b9f66148b",
+                "url": "https://api.github.com/repos/asticode/php-toolbox/zipball/55f30ee22329c2df4fd452e07d0347f1913af62c",
+                "reference": "55f30ee22329c2df4fd452e07d0347f1913af62c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "autoload": {
@@ -50,7 +54,7 @@
                 "shell",
                 "string"
             ],
-            "time": "2015-09-26 08:31:50"
+            "time": "2016-02-04 13:07:05"
         },
         {
             "name": "aura/sql",
@@ -109,9 +113,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "asticode/php-toolbox": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

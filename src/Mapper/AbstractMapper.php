@@ -247,7 +247,9 @@ abstract class AbstractMapper
      */
     protected function getPdo()
     {
-        return $this->oPdo;
+        $oPdo = $this->oPdo;
+        $oPdo->connect();
+        return $oPdo;
     }
 
     public function disconnectPdo()

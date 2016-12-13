@@ -152,6 +152,7 @@ abstract class AbstractMapper
 
     public function fetchAll(array $aWhere, $sOrderBy = '', $iLimit = 0, $iOffset = 0)
     {
+        $this->oPdo->connect();
         $this->formatToDb($aWhere);
         list($sQuery, $aParameters) = $this->buildSelectQuery($this->get('entity'), $aWhere, $sOrderBy, $iLimit, $iOffset);
         return $this->fetchAllQuery($sQuery, $aParameters);
@@ -207,6 +208,7 @@ abstract class AbstractMapper
 
     public function insert(array $aParameters)
     {
+        $this->oPdo->connect();
         $this->formatToDb($aParameters);
         list($sQuery, $aParameters) = $this->buildInsertQuery($this->get('entity'), $aParameters);
 
@@ -225,6 +227,7 @@ abstract class AbstractMapper
 
     public function update(array $aWhere, array $aToSet)
     {
+        $this->oPdo->connect();
         $this->formatToDb($aWhere);
         $this->formatToDb($aToSet);
         list($sQuery, $aParameters) = $this->buildUpdateQuery($this->get('entity'), $aWhere, $aToSet);

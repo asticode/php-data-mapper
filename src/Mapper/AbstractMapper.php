@@ -71,7 +71,7 @@ abstract class AbstractMapper
             }
         }
         foreach ($this->aBinaryColumns as $sColumn) {
-            if (isset($aRecord[$sColumn])) {
+            if (isset($aParameters[$sColumn])) {
                 $aParameters[$sColumn] = bin2hex($aParameters[$sColumn]);
             }
         }
